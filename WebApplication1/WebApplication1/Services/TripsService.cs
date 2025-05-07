@@ -1,5 +1,5 @@
-﻿using WebApplication1.DTOs;
-using WebApplication1.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.DTOs;
 using WebApplication1.Repositories;
 
 namespace WebApplication1.Services;
@@ -18,6 +18,7 @@ public class TripsService : ITripsService
     {
         var trips = await _tripsrepository.GetTripsAsync(cancellation);
         return trips;
+        
     }
 
     public async Task<IEnumerable<ClientTripDto>> GetUsersTripsAsync( int id,CancellationToken cancelation )
@@ -29,4 +30,8 @@ public class TripsService : ITripsService
         }
         return trips;
     }
+
+   
+        
+  
 }

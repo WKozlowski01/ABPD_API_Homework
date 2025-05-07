@@ -1,7 +1,8 @@
 ﻿using System.Data.SqlClient;
 using System.Transactions;
+using Microsoft.AspNetCore.Mvc;
 using WebApplication1.DTOs;
-using WebApplication1.Models;
+
 
 
 namespace WebApplication1.Repositories;
@@ -118,4 +119,6 @@ public class TripsRepository: ITripsRepository
 
         return trips;
     }
+
+   
 }
